@@ -10,7 +10,8 @@ const capialize=(string)=>{
   return string.charAt(0).toUpperCase()+string.slice(1);
 }
 async function fetchData(){
-  let url=`${process.env.REACT_APP_BACKEND_URL}/${props.cate}`;
+  console.log(process.env)
+  let url=`${process.env.REACT_APP_BACKEND_URL}/api/news/${props.cate}`;
   try{
     setLoading(true);
     props.setProgress(30);
