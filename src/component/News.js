@@ -10,7 +10,7 @@ const capialize=(string)=>{
   return string.charAt(0).toUpperCase()+string.slice(1);
 }
 async function fetchData(){
-  let url=`https://spnews-backend.onrender.com/api/news/${props.cate}`;
+  let url=`${process.env.REACT_APP_BACKEND_URL}/${props.cate}`;
   try{
     setLoading(true);
     props.setProgress(30);
