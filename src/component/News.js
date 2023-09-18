@@ -18,6 +18,7 @@ async function fetchData(){
       'Content-Type': 'application/json'}});
       console.log('done')
     props.setProgress(40);
+    console.log(data)
     let parseddata=await data.json();
     props.setProgress(70);
     setLoading(false);
